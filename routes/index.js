@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
+require('dotenv').config()
 
 //make a note found route
 
 //database
-const mongoDB = 'mongodb+srv://myAtlasDBUser:d9iO6UECAVrbhld7@myatlasclusteredu.w9k970n.mongodb.net/messaging?retryWrites=true&w=majority'
+const mongoDB = process.env.DATABASE_API
 const mongoose = require('mongoose')
 const messagesModel=require('../models/messages')
 mongoose.set('strictQuery',false)
