@@ -9,10 +9,13 @@
     <button ><a href="/new">new message</a></button>
     <main>
       <% messages.forEach(function(message){ %>
-        <h2><%=message.user %> </h2>
-        <p><%=message.text %></p>
-        <span><%=message.added%></span>
+        <h2><%=message.name %> </h2>
+        <p><%=message.message %></p>
+        <span><%=message.date%></span>
         <%}) %>
+        <% if(!messages){ %>
+        <h1>Loading...</h1>
+        <% } %>
     </main>
   </body>
 </html>
