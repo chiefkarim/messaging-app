@@ -17,13 +17,13 @@ let messages=[]
 router.get("/", function (req, res, next) {
  
   getMessages().then(()=>{
-    res.render("index", { title: "Express" ,messages:messages});
+    res.render("index", { title: "Messaging App" ,messages:messages});
 
   })
 });
 
 router.get("/new", function (req, res, next) {
-  res.render('new',{title:'new'});
+  res.render('new',{title:'new message'});
 });
 
 router.post('/new',function(req,res,next){
