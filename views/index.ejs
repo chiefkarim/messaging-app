@@ -4,18 +4,20 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body class="bg-[#41B3А3]">
-    <h1 class=" text-6xl"><%= title %></h1>
-    <button ><a href="/new">new message</a></button>
+  <body class="bg-[#004643] mx-96 text-center">
+    <h1 class="text-[#fffffe] text-3xl my-10">Messaging App</h1>
+    <button class="bg-[#f9bc60] text-[#001e1d] px-3 py-1 my-2 rounded-md" ><a href="/new">new message</a></button>
     <main>
       <% messages.forEach(function(message){ %>
-        <h2><%=message.name %> </h2>
-        <p><%=message.message %></p>
-        <span><%=message.date%></span>
+        <section class="p-3 my-10 bg-[#abd1c6] border-4 border-gray-100 rounded-md">
+        <h2 class="text-[##001e1d]">user name: <%=message.name %> </h2>
+        <p class="text-[##001e1d]">Message: <%=message.message %></p>
+        <span class="text-[##001e1d]"><%=message.date%></span>
+        
+        
+        </section>
+       
         <%}) %>
-        <% if(!messages){ %>
-        <h1>Loading...</h1>
-        <% } %>
     </main>
   </body>
 </html>

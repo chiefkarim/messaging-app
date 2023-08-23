@@ -4,17 +4,17 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <button ><a href="/">All message</a></button>
+  <body class="bg-[#004643] mx-96 text-center"¡>
+    <h1 class="text-[#fffffe] text-3xl my-10">Messaging App</h1>
+    <button class="bg-[#f9bc60] text-[#001e1d] px-3 py-1 my-2 rounded-md"><a href="/">All message</a></button>
     <main>
 
-      <form method="POST" action="/new">
+      <form class="flex gap-y-2 justify-center flex-col p-3 my-10 bg-[#abd1c6] border-4 border-gray-100 rounded-md" method="POST" action="/new">
 <input name="name" type="text" placeholder="UserName">
 <textarea name="message" type="text" placeholder="Your message">
 </textarea>
-  <button type="submit">submit</button>
+  <button class="bg-[#f9bc60]  text-[#001e1d] py-1 my-2 rounded-md" type="submit">submit</button>
 </form>
-    </main>
+    </main> 
   </body>
 </html>
